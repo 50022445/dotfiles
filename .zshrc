@@ -107,7 +107,7 @@ alias zshconfig="codium ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ask="ollama run dolphincoder:7b-starcoder2-q4_K_S"
 alias shred="shred -n 13"
-alias doom="emacs -nw"
+alias emacs="emacs -nw"
 # Zoxide config
 eval "$(zoxide init zsh)"
 # Created by `pipx` on 2024-06-23 13:29:40
