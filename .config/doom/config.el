@@ -38,9 +38,14 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
+
 (setq org-directory "~/org/")
+
 
 ;; Keybindings for my keychron keyboard
 (setq mac-command-modifier      'control
