@@ -1,5 +1,5 @@
 # Dotfiles
-A collection of my Emacs dotfiles :cowboy_hat_face: 
+A collection of my `dotfiles` :cowboy_hat_face: 
 
 ## Current setup
 | Tool   	| Version    	| URL                                    	| Theme   	|
