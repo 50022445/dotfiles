@@ -4,6 +4,15 @@
 ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 cd "$(dirname "$0")"
 
+# Cargo check (Rust)
+if command -v cargo >/dev/null 2>&1; then
+  echo "cargo is installed"
+  cargo install krabby
+else
+  echo "cargo is NOT installed!"
+  exit N
+fi
+
 # Stow zsh configs
 stow zsh
 
