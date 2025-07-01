@@ -1,17 +1,32 @@
 #!/bin/bash
 
 # Init
+RED="\033[31m"
+GREEN="\033[32m"
+BLUE="\033[34m"
+
 ZSH_CUSTOM=${ZSH_CUSTOM:-~/.oh-my-zsh/custom}
 cd "$(dirname "$0")"
 
+
 # Cargo check (Rust)
 if command -v cargo >/dev/null 2>&1; then
-  echo "cargo is installed"
+  echo -e $GREEN "cargo is installed, installing krabby..."
   cargo install krabby
 else
-  echo "cargo is NOT installed!"
+  echo -e $RED "cargo is NOT installed, please install it first"
   exit N
 fi
+
+# Cannot use stow if .zshrc exists
+FILE="~/.zshrc"
+if [ -f "$FILE" ]; then
+    echo -e $BLUE "\nexisting .zshrc file found, removing now..."
+    rm $FILE
+else 
+    echo "$FILE does not exist."
+fi
+
 
 # Stow zsh configs
 stow zsh
@@ -30,4 +45,4 @@ git clone https://github.com/zsh-users/zsh-autosuggestions \
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git \
   "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 
-echo "Completed! ;)"
+echo -e $GREEN "\nCompleted! ;)"
