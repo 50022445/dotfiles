@@ -1,5 +1,7 @@
-# ✨ Dotfiles  
+# ✨ Terminal config / dotfiles
 A collection of my personal configuration files — terminal magic included 🤠
+<br>
+Make sure you have [oh-my-zsh](https://ohmyz.sh/) installed.
 
 ## 🚀 Installation
 
@@ -15,3 +17,7 @@ These plugins enhance your terminal experience with syntax highlighting and auto
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+## 🧛🏻‍♀️ iTerm2
+The `Dracula` color scheme can be added to iTerm2's configuration through the application's settings.
+
